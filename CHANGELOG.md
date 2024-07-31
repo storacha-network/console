@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.9.2](https://github.com/storacha-network/console/compare/w3console-v1.9.1...w3console-v1.9.2) (2024-07-31)
+
+
+### Bug Fixes
+
+* check ref ([f406ac9](https://github.com/storacha-network/console/commit/f406ac985419824308b561a39430a4a38c5e43c1))
+* quotes ([bcf209b](https://github.com/storacha-network/console/commit/bcf209bf830a83b71f0f3f9f61919832a3768057))
+* use correct branch name ([f81e090](https://github.com/storacha-network/console/commit/f81e0907fcbed54323995acbb9c13f2c151f6db7))
+* use main branch ([698974b](https://github.com/storacha-network/console/commit/698974b36ff3c4cb0275a25aec4384fecb2723d2))
+
+
+### Other Changes
+
+* add storacha deploy action ([39345e6](https://github.com/storacha-network/console/commit/39345e60e639fd11eb9af44766d16fc71ed73945))
+* update deploy name ([f7c1340](https://github.com/storacha-network/console/commit/f7c1340858e449e49237c7c40b85cebfa9721a01))
+
 ## [1.9.1](https://github.com/storacha-network/console/compare/w3console-v1.9.0...w3console-v1.9.1) (2024-07-15)
 
 
