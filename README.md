@@ -1,12 +1,12 @@
 # Console
 
-> Your dashboard for web3.storage
+> Your dashboard for storacha.network
 
 Upload files & manage your spaces from your browser.
 
 ## Getting Started
 
-To use the production site visit https://console.web3.storage
+To use the production site visit https://console.storacha.network
 
 To contribute and customize console, copy `.env.tpl` to `.env` and run the development server:
 
