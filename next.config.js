@@ -2,7 +2,40 @@
 const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
-  }
+  },
+  // Configure headers for iframe support
+  async headers() {
+    return [
+      // Default security headers for main app
+      {
+        source: '/((?!iframe).*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'none';",
+          },
+        ],
+      },
+      // Iframe-friendly headers only for /iframe routes
+      {
+        source: '/iframe/:path*',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'ALLOWALL',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors *; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';",
+          },
+        ],
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
