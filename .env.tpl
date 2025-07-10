@@ -26,3 +26,8 @@ NEXT_PUBLIC_SENTRY_DSN=https://bf79c216fe3c72328219f04aabeebc99@o609598.ingest.u
 NEXT_PUBLIC_SENTRY_ORG=storacha-it
 NEXT_PUBLIC_SENTRY_PROJECT=console
 NEXT_PUBLIC_SENTRY_ENV=development
+
+# set this to enable the private spaces feature
+NEXT_PUBLIC_PRIVATE_SPACES_ENABLED=true
+# set this to restrict which users can access the private spaces feature if enabled
+NEXT_PUBLIC_PRIVATE_SPACES_DOMAINS=dmail.ai,storacha.network

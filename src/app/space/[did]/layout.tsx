@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react'
 import { useW3 } from '@w3ui/react'
 import { DidIcon } from '@/components/DidIcon'
 import { Nav, NavLink } from '@/components/Nav'
-import { QueueListIcon, ShareIcon, CloudArrowUpIcon } from '@heroicons/react/24/outline'
+import { QueueListIcon, ShareIcon, CloudArrowUpIcon, LockClosedIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 
 interface LayoutProps extends PropsWithChildren {
   params: {
@@ -39,9 +39,26 @@ export default function Layout ({children, params}: LayoutProps): JSX.Element {
         <div className='flex flex-row items-start gap-4'>
           <DidIcon did={space.did()} width={10} />
           <div className='grow overflow-hidden whitespace-nowrap text-ellipsis text-black'>
-            <h1 className='text-2xl leading-5 text-hot-red'>
-              {space.name || 'Untitled'}
-            </h1>
+            <div className="flex items-center gap-2">
+              <h1 className='text-2xl leading-5 text-hot-red'>
+                {space.name || 'Untitled'}
+              </h1>
+              {(space as any).accessType === 'private' ? (
+                <>
+                  <LockClosedIcon className="w-5 h-5 text-hot-red" />
+                  <span className="bg-hot-red text-white px-2 py-1 rounded-full text-xs">
+                    Private
+                  </span>
+                </>
+              ) : (
+                <>
+                  <GlobeAltIcon className="w-5 h-5 text-gray-600" />
+                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">
+                    Public
+                  </span>
+                </>
+              )}
+            </div>
             <label className='font-mono text-xs'>
               {space.did()}
             </label>
